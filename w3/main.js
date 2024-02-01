@@ -1,4 +1,5 @@
 
+/*
 function determineHouseHoldPts(numberInHousehold) {
 
     const myHeading = document.querySelector("h3");
@@ -28,3 +29,28 @@ let carbonFootprintPoints = 0;
 
 determineHouseHoldPts(2)
 determineHouseHoldPts(1)
+
+*/
+
+function updateImpactScore() {
+    
+    const selectedValue = document.getElementById('homeSize').value;
+
+    let score = 0;
+    
+  
+    if (selectedValue === 'large') {
+        score += 11;
+    } else if (selectedValue === 'medium') {
+        score += 9;
+    } else if (selectedValue === 'small') {
+        score += 7;
+    } else if (selectedValue === 'apartment') {
+        score += 5;
+    } else {
+        console.log('Invalid selection');
+    }
+
+
+    document.getElementById('impactScore').innerText = `Your impact score is: ${score}, the lower the better`;
+}

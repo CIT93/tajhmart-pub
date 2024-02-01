@@ -7,6 +7,23 @@
     <script defer src="main.js"></script>
 </head>
 <body>
-    <h3></h3>
+    <h2 name="new" >IMPACT SCORE</h2>
+    <h4><p>Consider the size of your home. A smaller home makes a smaller impact on the environment. Take the size of your home into account as you calculate your impact.
+       <p>If you have a large house your number will be 1 + 10<br>    
+    If you have a medium-sized house your number will be 2 + 7<br>
+    If you have a small house your number will be 3 + 4<br>
+    If you have a apartment your number will be 4 + 1
+    </p></h4>
+    <label for="homeSize">Select Home Size:</label>
+    <select id="homeSize" onchange="updateImpactScore()">
+        <option value="">--Make a choice--</option>
+        <option value="large">Large House</option>
+        <option value="medium">Medium-sized House</option>
+        <option value="small">Small House</option>
+        <option value="apartment">Apartment</option>
+    </select>
+
+    <p id="impactScore">Your impact score will be displayed here.</p>
+        <h3></h3>
 </body>
 </html>
