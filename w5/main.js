@@ -71,17 +71,16 @@ function displayOutput() {
     const newP = document.createElement("p");
     const newH3 = document.createElement("h3");
   
-   
-  
+     
     newH3.textContent = `Members of household of ${obj.houseMem} (score: ${obj.houseHPTS}),`;
     newP.textContent += ` and a "${obj.houseSze}" size home (score is:${obj.cfpTotal}).`;
     newH2.textContent = `Your Carbon Footprint is ${obj.cfpTotal}`;
-    newP.textContent = `----------------------------------------------------------------`;
+    newP.textContent = `-------------------------------------------------------------`;
    
-
     output.appendChild(newH3);
     output.appendChild(newP);
     output.appendChild(newH2);
+    output.appendChild(newP);
    
   }
 }
