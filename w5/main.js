@@ -61,11 +61,8 @@ function determineHouseHoldPts(numberInHousehold) {
 
 //displayOutObj(cfpObj);
 
-  
-
 function displayOutput() {
   for (obj of cfpData) {
-  //  console.log(obj)
     const output = document.getElementById("output");
     const newH2 = document.createElement("h2");
     const newP = document.createElement("p");
@@ -75,13 +72,12 @@ function displayOutput() {
     newH3.textContent = `Members of household of ${obj.houseMem} (score: ${obj.houseHPTS}),`;
     newP.textContent += ` and a "${obj.houseSze}" size home (score is:${obj.cfpTotal}).`;
     newH2.textContent = `Your Carbon Footprint is ${obj.cfpTotal}`;
-    newP.textContent = `-------------------------------------------------------------`;
+  
    
     output.appendChild(newH3);
     output.appendChild(newP);
     output.appendChild(newH2);
-    output.appendChild(newP);
-   
+  
   }
 }
 
@@ -124,8 +120,6 @@ displayOutput();
 //console.log(myObj.cfpTotal);
 //console.log(myObj["houseSize"]);
 //myObj.displayOutput();
-
-
 
 
 // for (initialization; conditionl afterthought)
