@@ -36,7 +36,6 @@ function determineHouseHoldPts(numberInHousehold) {
   }
 
   function displayOutObj(obj){
- //   console.log(obj)
     const output = document.getElementById("output");
     const newH3 = document.createElement("h3");
     newH3.textContent = `House Hold Members: ${obj.houseMem} /
@@ -68,14 +67,12 @@ function displayOutput() {
     const newP = document.createElement("p");
     const newH3 = document.createElement("h3");
     const newLine = document.createElement("p");
-  
-     
+       
     newH3.textContent = `Members of household of ${obj.houseMem} (score: ${obj.houseHPTS}),`;
     newP.textContent += ` and a "${obj.houseSze}" size home (score is:${obj.cfpTotal}).`;
     newH2.textContent = `Your Carbon Footprint is ${obj.cfpTotal}`;
     newLine.textContent = `------------------------------------------------------------------`;
   
-   
     output.appendChild(newH3);
     output.appendChild(newP);
     output.appendChild(newH2);
